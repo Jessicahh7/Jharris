@@ -1,0 +1,150 @@
+.jh-nav{
+	background-color: black !important;
+ 	height: 210px !important;
+ 	color: white;
+}
+
+.jh-logo{
+    height: 300px;
+    width: 100%;
+    margin-left: -3%;
+    margin-top: 3%;
+}
+
+.jh-nav-text{
+	color: white !important;
+	background-color: black;
+	
+}
+
+.jh-dropdown{
+	background-color: black;
+	color: #ED7D31;
+}
+
+.jh-nav-text2{
+	color: #ED7D31;
+	
+}
+
+.jh-nav-content{
+	margin-left: 680px;
+}
+
+.jh-dropdown2{
+	margin-top: 130px;
+}
+
+.jh-nav2{
+	margin-top: 80px;
+	margin-right: -45px;
+}
+
+.jh-nav3{
+	margin-top: 40px;
+	margin-right: -58px;
+}
+
+.jh-raise{
+	margin-left: 32%;
+}
+
+.clip-text {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+    background-position: -.65em 0;
+}
+
+.clip-text--no-textzone:after {
+    content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+  background-position: 50% 50%;
+}
+
+.clip-text_six {
+    background-image: url(https://www.hdwallpapers.net/previews/3d-colorful-spiral-1057.jpg);
+}
+
+.clip-text_nine {
+    background-image: url(https://wallpaperbrowse.com/media/images/background-pictures-10.jpg);
+}
+
+.card-container {
+  height: 150px;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  background-color: blue;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.card .back {
+  transform: rotateY(180deg);
+  background-color: red;
+}
+
+
+/* #ED7D31 */
