@@ -1,8 +1,180 @@
-.jh-nav{
-	background-color: black !important;
- 	height: 210px !important;
- 	color: white;
+#navbar {
+  background-color: #396E8F; 
+  position: fixed; 
+  top: -64px; 
+  width: 100%; 
+  transition: top 0.3s;
+  z-index: 1;
 }
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #396E8F;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  font-size: 28px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+/* Side menu animation/ style begin */
+
+.square,
+.line,
+.circle {
+  transition: background-color 0.25s;
+  transition: opacity 1s;
+}
+
+.line1,
+.line2,
+.line3 {
+    transition: transform 0.75s;
+}
+
+.square{
+  height: 68px;
+  width: 78px;
+  cursor: pointer;
+  background-color: #396e8f;
+  border-radius: 0 70px 70px 0;
+  transform: translate(0px, 20px);
+}
+
+.content{
+  transform: translate(3px, -10px);
+  display: inline-block;
+}
+
+.circles,
+.lines {
+  display: inline-block;
+}
+
+.lines{
+	transform: translate(6px, 26px);
+	}
+
+.line {
+  background-color: white;
+  height: 7px;
+  width: 35px;
+}
+
+.line1{
+  margin-top: 0px;
+}
+
+.line2{
+  margin-top: 6px;
+}
+
+.line3{
+  margin-top: 6px;
+}
+
+.circle {
+  background-color: white;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+}
+
+.circles{
+	transform: translate(6px, 27px);
+}
+
+.circle1{
+
+}
+
+.circle2{
+  margin-top: 6px;
+}
+
+.circle3{
+  margin-top: 6px;
+}
+
+.square:hover {
+  background-color: #24516d;
+}
+
+.square:hover .line,
+.square:hover .circle {
+  background-color: #d8e7f6;
+  transform: translate(1px, 1px);
+}
+
+.square:hover .circle {
+  opacity: 0;
+}
+
+.square:hover .line1 {
+  transform: translate3d(0px,25px,0px);
+}
+
+.square:hover .line2 {
+  transform: translate3d(0px,0px,0px);
+  transform: rotate(180deg);
+}
+
+.square:hover .line3 {
+  transform: translate3d(0px,-25px,0px);
+}
+
+/* Side menu animation / style end */
 
 .jh-logo{
     height: 300px;
@@ -19,11 +191,11 @@
 
 .jh-dropdown{
 	background-color: black;
-	color: #ED7D31;
+	color: #dae2ea;
 }
 
 .jh-nav-text2{
-	color: #ED7D31;
+	color: #dae2ea;
 	
 }
 
@@ -49,7 +221,7 @@
 	margin-left: 32%;
 }
 
-.clip-text {
+.jh-clip-text {
     font-size: 6em;
     font-weight: bold;
     line-height: 1;
@@ -65,14 +237,14 @@
     -webkit-text-fill-color: transparent;
 }
 
-.clip-text:before,
-.clip-text:after {
+.jh-clip-text:before,
+.jh-clip-text:after {
     position: absolute;
     content: '';
 }
 
 /* Background */
-.clip-text:before {
+.jh-clip-text:before {
     z-index: -2;
     top: 0;
     right: 0;
@@ -82,7 +254,7 @@
 }
 
 /* Text Background (black zone) */
-.clip-text:after {
+.jh-clip-text:after {
     position: absolute;
     z-index: -1;
     top: .125em;
@@ -93,38 +265,34 @@
 }
 
 /* Change the background position to display letter when the black zone isn't here */
-.clip-text--no-textzone:before {
+.jh-clip-text--no-textzone:before {
     background-position: -.65em 0;
 }
 
-.clip-text--no-textzone:after {
+.jh-clip-text--no-textzone:after {
     content: none;
 }
 
 /* Use Background-size cover for photo background and no-repeat background */
-.clip-text--cover,
-.clip-text--cover:before {
+.jh-clip-text--cover,
+.jh-clip-text--cover:before {
     background-repeat: no-repeat;
     -webkit-background-size: cover;
             background-size: cover;
   background-position: 50% 50%;
 }
 
-.clip-text_six {
+.jh-clip-text_six {
     background-image: url(https://www.hdwallpapers.net/previews/3d-colorful-spiral-1057.jpg);
 }
 
-.clip-text_nine {
-    background-image: url(https://wallpaperbrowse.com/media/images/background-pictures-10.jpg);
-}
-
-.card-container {
+.jh-card-container {
   height: 150px;
   perspective: 600;
   position: relative;
   width: 150px;
 }
-.card {
+.jh-card {
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
@@ -132,18 +300,274 @@
   width: 100%;
   background-color: green;
 }
-.card:hover {
+.jh-card:hover {
   transform: rotateY(180deg);
 }
-.card .side {
+.jh-card .jh-side {
   backface-visibility: hidden;
   height: 100%;
   position: absolute;
   width: 100%;
 }
-.card .back {
+.jh-card .jh-back {
   transform: rotateY(180deg);
   background-color: red;
+}
+
+.jh-table-row1{
+	width: 100%;
+	height: 300px;
+	background-color: blue;
+}
+
+.jh-p1{
+	background-image: url('/square-pic.png');
+	position: relative;
+	height: 150vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-size: 100%;
+	background-color: #dae2ea;
+}
+  
+ .jh-p2{
+	background-image: url('/mountains.png');
+	position: relative;
+	height: 150vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-size: 100%;
+	background-color: #dae2ea;
+ }
+
+.jh-p3{
+	background-image: url('waves.png');
+	position: relative;
+	height: 150vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-size: 100%;
+	background-color: #dae2ea;
+}
+
+.jh-t1{
+	height: 150vh;
+	position: relative;
+	background-color: #dae2ea;
+}
+
+.jh-t2{
+	height: 150vh;
+	position: relative;
+	background-color: #dae2ea;
+}
+
+.jh-t3{
+	height: 88vh;
+	position: relative;
+	background-color: #dae2ea;
+	width: 100%;
+}
+
+.jh-shadow-text {
+	color: white; 
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-size: 603%;
+    text-align: center;
+    margin-bottom: 70px;
+    padding-top: 50px;
+}
+
+.jh-card-deck{
+	margin-bottom: 70px;
+	margin-left: 20px;
+    margin-right: 20px;
+}
+
+.jh-footer-copy{
+	margin-left: 42%;
+	padding-top: 3%;
+	position: absolute;
+	bottom: 12px;	
+}
+
+.jh-body-space {
+}
+
+.jh-shadow-text2 {
+	color: white; 
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-size: 603%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+.jh-shadow-text3 {
+	color: white; 
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-size: 603%;
+    text-align: center;
+    margin-bottom: 70px;
+    padding-top: 50px;
+}
+
+.jh-resume-btn {
+	background-color: #396e8f;
+	transform: translate(430px, 48px);
+	z-index: 1;
+	position: relative;
+}
+
+.jh-resume-btn:hover {
+	background-color: #519ece;
+}
+
+.jh-link{
+	color: white;
+}
+
+
+@charset "utf-8";
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+a[class*="entypo-"]:before {
+	font-family: 'entypo', sans-serif;
+}
+
+/* ---------- GENERAL ---------- */
+
+body {
+	background: #fffdf0;
+	font: 100%/1.5em sans-serif;
+	margin: ;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	height: 10em;
+	left: 20%;
+	margin: -1.5em 0 0 -6em;
+	position: absolute;
+	top: 58%;
+	width: 20em;
+}
+
+/* ---------- SOCIAL ---------- */
+
+.social {
+	position: relative;
+	height: 1em;
+	width: 55em;
+}
+
+@media (max-width: 1000px) {
+	.social {
+	    position: relative;
+	    height: 19em;
+	    width: 35em;
+	    transform: translate(0px, -110px);
+	}
+}
+
+@media (max-width: 600px) {
+	.social {
+        position: relative;
+	    height: 18em;
+	    width: 22em;
+	    transform: translate(32px, -124px);
+	}
+}
+
+.social li {
+	display: block;
+	height: 12em;
+	line-height: 4em;
+	margin: -2.2em;
+	position: absolute;
+	-webkit-transition: -webkit-transform .7s;
+	-moz-transition: -moz-transform .7s;
+	-ms-transition: -ms-transform .7s;
+	-o-transition: -o-transform .7s;
+	transition: transform .7s;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(0deg);
+	text-align: center;
+	width: 27%;
+}
+
+.social a {
+	color: #fffdf0;
+	display: block;
+	height: 4em;
+	line-height: 4em;
+	text-align: center;
+	transform: rotate(0deg);
+	width: 4em;	
+}
+
+.social li:hover {
+ 	-webkit-transform: scale(1.3,1.3) rotate(45deg);
+	-moz-transform: scale(1.3,1.3) rotate(45deg);
+  	-ms-transform: scale(1.3,1.3) rotate(45deg);
+	-o-transform: scale(1.3,1.3) rotate(45deg);
+  	transform: scale(1.3,1.3) rotate(45deg);
+}
+
+.facebook {
+	left: 0;
+	top: 0%;
+}
+
+.twitter {
+	bottom: 0;
+	left: 25%;
+}
+
+.github {
+	left: 50%;
+	top: 0%;
+}
+
+.instagram {
+	bottom: 0;
+	left: 75%;
+}
+
+.linked-in {
+	left: 100%;
+	top: 0%;
+}
+
+.social-img {
+	height: 250%;
+    width: auto;
+}
+
+.jh-resume{
+	height: 80%;
+    width: auto;
+    display: block;
+    transform: translate(1px, -50px);
+	margin-left: auto;
+	margin-right: auto;
+  	box-shadow: 4px 4px 17px 5px #6a6a6a;
 }
 
 

@@ -23,18 +23,3 @@ public class MainController {
 	}
 }
 
-
-//@GetMapping("/")
-//public String index(Subscriber subscriber) {
-//	return "subscriber/index.html";
-//}
-//
-//@GetMapping("/discover")
-//public String discover(Subscriber subscriber) {
-//	return "subscriber/discover.html";
-//}
-//
-//@GetMapping("/featured")
-//public String featured(Subscriber subscriber) {
-//	return "subscriber/featured.html";
-//}
